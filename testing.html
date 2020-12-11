@@ -22,6 +22,40 @@
 					Find my code at <a href="http://github.com/coryd5456">github.com/coryd5456</a>.</strong></h1>
 				</div>
 			</header>
+			<?php
+$received = file_get_contents('php://input');
+$timeNow = date("F j, Y, g:i a");
+$subject = "Email Subject - ".time();
+ 
+$bound_text = "----*%$!$%*";
+$bound = "--".$bound_text."\r\n";
+$bound_last = "--".$bound_text."--\r\n";
+ 
+$headers = "From: youremail@host.com\r\n";
+$headers .= "MIME-Version: 1.0\r\n" .
+"Content-Type: multipart/mixed; boundary=\"$bound_text\""."\r\n" ;
+$message =
+'Content-Type: text/html; charset=UTF-8'."\r\n".
+'Content-Transfer-Encoding: 7bit'."\r\n\r\n".
+'
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;'."\n\n".
+$bound;
+ 
+$message .= "Content-Type: image/jpeg; name=\"filename.jpg\"\r\n"
+."Content-Transfer-Encoding: base64\r\n"
+."Content-ID: &lt;filename.jpg&gt;\r\n"
+."\r\n"
+.chunk_split(base64_encode($received))
+.$bound_last;
+ 
+echo mail('youremail@yourhost.net', $subject, $message, $headers);
+
+				?>
 
 		<!-- Main -->
 			<div id="main">
