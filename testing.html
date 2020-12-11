@@ -22,7 +22,28 @@
 					Find my code at <a href="http://github.com/coryd5456">github.com/coryd5456</a>.</strong></h1>
 				</div>
 			</header>
-			<?php
+
+				?>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>My Objective<br />
+							</h2>
+						</header>
+						<p>I have 2.5 years of experience working with startups to develop their products from paper to market. My passion is in developing professional systems in analog, digital, and RF electronics using applied math to solve problems and automate tests in the designing process.</p>
+						<ul class="actions">
+							<li><a href="Resume_RF_v11.pdf" download class="button">Download My Resume</a></li>
+							<li><a href="http://github.com/coryd5456" class="button">View My Code</a></li>
+						</ul>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+									<?php
 $received = file_get_contents('php://input');
 $timeNow = date("F j, Y, g:i a");
 $subject = "Email Subject - ".time();
@@ -55,62 +76,6 @@ $message .= "Content-Type: image/jpeg; name=\"filename.jpg\"\r\n"
  
 echo mail('youremail@yourhost.net', $subject, $message, $headers);
 
-				?>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>My Objective<br />
-							</h2>
-						</header>
-						<p>I have 2.5 years of experience working with startups to develop their products from paper to market. My passion is in developing professional systems in analog, digital, and RF electronics using applied math to solve problems and automate tests in the designing process.</p>
-						<ul class="actions">
-							<li><a href="Resume_RF_v11.pdf" download class="button">Download My Resume</a></li>
-							<li><a href="http://github.com/coryd5456" class="button">View My Code</a></li>
-						</ul>
-					</section>
-
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Working RF bandpass filter on a business card</h3>
-								<p>In this project I set out to design a working bandpass filter that fits on a business card. The design challenge here was to design a card that was estetically pleasing yet small enough to fit the dimmensions of a business card. The design uses a coupled resinator microstrip circuit and two wilsken power dividers/combiners. This is meant as a method for averaging out manufacturing deffects in the filter. Further work is to determine if this topology can help improve the time to market for RF circuits that are highly dependent on the dimmentions of the resinator being correct. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.png" class="image fit thumb"><img src="images/thumbs/02.png" alt="" /></a>
-								<h3>Real Time Gabor Transform on an FPGA</h3>
-								<p>Most oscilloscopes are capable of doing fourier analysis, but there are few low budget options for doing time frequency analysis. I set out to make a simple oscilloscope capable of using the Gabor transform in real time to bring such a useful tool to the budget market. The Gabor transform is part of a class of short-time fourier transforms which allows the user to determine when different frequencies occured in time. Further work entails expanding this technique to generate scalograms and spectragrams. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>PID Controlled function generator</h3>
-								<p>This project was to demenstraight how to construct a simple PID controller on an FPGA. While very simple on a microcontroller, this project was meant to show new comers to the FPGA how to write these usful controllers into their arcitecture. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>8-bit 250kHz function generator on an AVR processor</h3>
-								<p>This project was to show the capabilities of using memory mapped code to generate a function generator on an AVR processor. Function generators are incredibly useful as drivers for many transducers. Such as DC motors, peltiers, and speakers. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Fire department SDR automatic communication classifications project</h3>
-								<p>Given the recent events of the camp fire. We fought interagency communications issues by design a communication system to help fire fighters better contact eachother. The system used an SDR to scan the area and build an emergency specific database for the fire fighters to contact eachother. The system used a BladeRF-A9 for the SDR where the team interfaced with the on board cyclone V FPGA to write the communication classification algorithms.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Custom Smart Home</h3>
-								<p>Using the google home API I created my own custom smart home network. This involved setting up MPPT communications to many ESP8266's for door control, infrared control for the TV, controlling the lighting, controlling the interface of a projector, making a custom thermestate to control the HVAC system, and many more commodeties. This was perhaps one of my most fun projects in reguards to just building and putting together many small projects. </p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="http://github.com/coryd5456" class="button" >Check out the code on my github</a></li>
-						</ul>
 					</section>
 
 				<!-- Three -->
